@@ -9,9 +9,9 @@
  <h1>Chathurya Reddy Aenugu packs for a trip</h1>
 
  <form>
-    <label for="light"><input type="checkbox" id="light" value="True">Pack Light </label>
+    <label for="light"><input type="checkbox" id="light" value="true">Pack Light </label>
     <br>
-    <label for="carry"><input type="checkbox" id="carry" value="True">Carry On</label>
+    <label for="carry"><input type="checkbox" id="carry" value="true">Carry On</label>
     <br>
     <label for="tablet"><input type="checkbox" id="tablet" value="false">Tablet</label>
     <br>
@@ -40,6 +40,29 @@
  </script>
 
 
+<hr>
+    <form>
+        <input type="text" id=" monthName" value="May">Enter travel Month
+        <br>
+        <input type="text" id="tripPrice">Enter Price
+        <br>
+    </form>
+    <br>
+    <button type="button" onclick="updatePack()">Update the pack</button>
+    <script>
+        function updatePack() {
+            let month = document.getElementById("monthName").value;
+            let price = document.getElementById("tripPrice").value;
 
- </body>
+            my_pack["monthName"] = month;
+            my_pack["tripPrice"] = price;
+
+            document.getElementById("results").innerHTML = JSON.stringify(my_pack);
+
+        }
+
+    </script>
+
+
+</body>
 </html> 
