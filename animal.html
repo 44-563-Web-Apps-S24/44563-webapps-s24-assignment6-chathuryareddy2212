@@ -39,6 +39,34 @@
 
         document.getElementById("result").innerHTML = `Correct: ${correct}, Wrong: ${wrong}`;
     }
+
+</script>
+    <div>
+         <img src="apple juice.jpg" id="image" width="150" height="150" onclick="selectImage()">
+       </div>
+
+       <script>
+            let useImage = 1;
+            function selectImage() {
+                switch(useImage) {
+                    case 1: 
+                       document.getElementById("image").src= "green tea.jpg";
+                       useImage = 2 ;
+                    break;
+
+                    case 2:
+                       document.getElementById("image").src= "nut milk.jpg";
+                       useImage = 3 ;
+                    break;
+
+                    case 3:
+                       document.getElementById("image").src= "apple juice.jpg";
+                       useImage = 1 ;
+                    break;
+                }
+            }
+      
+
  </script>
 
 </body>
