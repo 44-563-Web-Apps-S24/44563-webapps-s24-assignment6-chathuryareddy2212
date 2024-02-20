@@ -44,5 +44,40 @@
  </script>
 
 
+<form>
+    <label for="sum">Sum</label>
+    <input type="radio" id="sum" onclick="chooseOp()" name="Chathurya"  value="sum">
+    <label for="mult">mult</label>
+    <input type="radio" id="mult" onclick="chooseOp()" name="Chathurya"  value="multiply">
+    <label for="exp">exp</label>
+    <input type="radio" id="exp" onclick="chooseOp()" name="Chathurya"  value="exponent">
+
+
+    <div id="result"></div>
+</form>
+<script>
+        function chooseOp() {
+            let price = document.getElementById("price").value;
+            let reduction = document.getElementById("reductions").value;
+            let sum = document.getElementById("sum").checked;
+            let mul = document.getElementById("mult").checked;
+            let exp = document.getElementById("exp").checked;
+            if(sum) {
+                let total = parseInt(price) + parseInt(reduction);
+                document.getElementById("result").innerHTML = "The result is: " + total;
+            }
+            else if(mul) {
+                let total = price * reduction;
+                document.getElementById("result").innerHTML = "The result is: " + total;
+            }
+            else if(exp) {
+                let total = Math.pow(price, reduction);
+                document.getElementById("result").innerHTML = "The result is: " + total;
+            }
+
+        }
+</script>
+
+
  </body>
 </html> 
