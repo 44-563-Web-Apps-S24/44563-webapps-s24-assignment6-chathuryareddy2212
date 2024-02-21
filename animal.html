@@ -17,19 +17,17 @@
 
   <h1>Animal game by Chathurya Reddy Aenugu</h1>
 
- <form id="animalForm">
-    <label for="hiddenAnimal">The hidden animal type:</label>
-    <input type="password" id="hiddenAnimal" value="Chicken"><br><br>
-    
-    <label for="guessAnimal">Guess the animal:</label>
-    <input type="text" id="guessAnimal"><br><br>
+  <form>
+    <label for="secretAnimal">The hidden animal type</label>
+    <input type="password" id="secretAnimal" value="Chicken">
+
+    <label for="guessAnimal">Guess the animal</label>
+    <input type="text" id="guessAnimal">
 
     <button type="button" class="btn btn-success" onclick="checkAnimal()">Check the guess</button>
  </form>
-    
 
- <p id="result"></p>
-
+ <p id="resultHolder">Correct: 0 | Wrong: 0</p>
 
  <script>
     let correct = 0;
@@ -55,8 +53,7 @@
     else{ alert("Sorry, too many wrong guesses")}
     }
  </script>
-     
-   
+
  <div>
          <img src="apple juice.jpg" id="image" width="150" height="150" onclick="selectImage()">
        </div>
