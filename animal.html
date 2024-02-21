@@ -31,25 +31,31 @@
 
 
  <script>
-     let wrong = 0;
     let correct = 0;
+    let wrong = 0;
+
     function checkAnimal() {
-        const hiddenAnimalInput = document.getElementById('Hidden-animal-type');
-        const guessAnimalInput = document.getElementById('Guess-the-animal');
-        const resultElement = document.getElementById('result');
-        if (hiddenAnimalInput.value === guessAnimalInput.value){
+        if (wrong < 10)
+        {
+        const secretAnimal = document.getElementById("secretAnimal").value;
+        const guessedAnimal = document.getElementById("guessAnimal").value;
+     
+        if (secretAnimal.toLowerCase() === guessedAnimal.toLowerCase()) {
             correct++;
             alert("Ruff ruff");
         } else {
             wrong++;
             alert("Grrrr");
         }
-        resultElement.innerHTML = `<p>Correct guess: ${correct}, Wrong guess: ${wrong}</p>`; 
-        guessAnimalInput.value = '';
-        }
-    </script>
-    
-    
+
+        const result = document.getElementById("resultHolder");
+        result.innerHTML = `Correct: ${correct} | Wrong: ${wrong}`;
+    }
+    else{ alert("Sorry, too many wrong guesses")}
+    }
+ </script>
+     
+   
  <div>
          <img src="apple juice.jpg" id="image" width="150" height="150" onclick="selectImage()">
        </div>
