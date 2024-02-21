@@ -38,6 +38,14 @@
         }
 
         document.getElementById("result").innerHTML = `Correct: ${correct}, Wrong: ${wrong}`;
+
+       
+        
+        if (wrong > correct) {
+                document.getElementById('animalForm').onclick = function() {
+                    alert('Sorry, too many wrong guesses.');
+                };
+            }
     }
 
 </script>
